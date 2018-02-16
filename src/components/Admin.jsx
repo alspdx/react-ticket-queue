@@ -15,7 +15,8 @@ function Admin(props){
       <TicketList
         ticketList={props.ticketList}
         currentRouterPath={props.currentRouterPath}
-        onTicketSelection={props.onTicketSelection} />
+        onTicketSelection={props.onTicketSelection}
+        onDeleteTicket={props.onDeleteTicket} />
     </div>
   );
 }
@@ -24,7 +25,8 @@ Admin.propTypes = {
   ticketList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
   onTicketSelection: PropTypes.func.isRequired,
-  selectedTicket: PropTypes.string
+  selectedTicket: PropTypes.string,
+  onDeleteTicket: PropTypes.func
 };
 
 export default Admin;

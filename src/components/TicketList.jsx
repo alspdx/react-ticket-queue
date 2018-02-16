@@ -16,7 +16,8 @@ function TicketList(props){
           currentRouterPath={props.currentRouterPath}
           key={ticketId}
           onTicketSelection={props.onTicketSelection}
-          ticketId={ticketId} />;
+          ticketId={ticketId}
+          onDeleteTicket={props.onDeleteTicket} />;
       })}
     </div>
   );
@@ -26,6 +27,7 @@ TicketList.propTypes = {
   ticketList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func,
+  onDeleteTicket: PropTypes.func
 };
 
 export default TicketList;

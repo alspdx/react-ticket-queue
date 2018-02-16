@@ -10,7 +10,9 @@ function Ticket(props){
     </div>;
   if (props.currentRouterPath === '/admin'){
     return (
-      <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
+      <div>
+        <button onClick={() => {props.onTicketSelection(props.ticketId);}}>Show Details</button> 
+        <button onClick={() => {props.onDeleteTicket(props.ticketId);}}>Delete That Shit!</button>
         {ticketInformation}
       </div>
     );
@@ -31,7 +33,8 @@ Ticket.propTypes = {
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func,
-  ticketId: PropTypes.string.isRequired
+  ticketId: PropTypes.string.isRequired,
+  onDeleteTicket: PropTypes.func
 };
 
 export default Ticket;

@@ -26,7 +26,8 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.0.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "styled-jsx": "^2.2.5"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

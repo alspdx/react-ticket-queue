@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { HashRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
+/*eslint-disable*/
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())
 );
+/*eslint-enable*/
 
 const render = (Component) => {
   ReactDOM.render(

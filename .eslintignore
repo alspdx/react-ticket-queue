@@ -1,0 +1,5 @@
+__tests__
+src/actions/*.js
+src/constants/*.js
+src/middleware/*.js
+src/reducers/*.js
